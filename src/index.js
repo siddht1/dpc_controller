@@ -11,7 +11,8 @@ const PORT = process.env.PORT || 3002;
 // For testing purposes 
 app.get("/", (req, res) => { 
 //     res.send('{"status":"working"}');
-    app.use(express.static(__dirname));
+   // app.use(express.static(__dirname));
+    res.send(__dirname);
 });
 
 app.listen(PORT, () => { 
