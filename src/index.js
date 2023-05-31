@@ -12,7 +12,8 @@ const PORT = process.env.PORT || 3002;
 app.get("/", (req, res) => { 
 //     res.send('{"status":"working"}');
    // app.use(express.static(__dirname));
-    res.send(__dirname);
+    //res.send(__dirname);
+     res.sendFile(__dirname + "/index.html");
 });
 
 app.listen(PORT, () => { 
