@@ -10,7 +10,8 @@ const PORT = process.env.PORT || 3002;
 // const data = await response.json();
 // For testing purposes 
 app.get("/", (req, res) => { 
-    res.send('{"status":"working"}');
+//     res.send('{"status":"working"}');
+    app.use(express.static(__dirname));
 });
 
 app.listen(PORT, () => { 
