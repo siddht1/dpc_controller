@@ -17,6 +17,10 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
+app.post("/", (req, res) => {
+  res.send("Thank you for subscribing");
+});
+
 app.listen(PORT, () => { 
     console.log(`API is listening on port ${PORT}`); 
 });
