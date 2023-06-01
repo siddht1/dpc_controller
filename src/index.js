@@ -1,6 +1,7 @@
 // In src/index.js 
 // import fetch from 'node-fetch';
 const express = require("express"); 
+const bodyParser = require("body-parser");
 const app = express(); 
 
 const PORT = process.env.PORT || 3002; 
