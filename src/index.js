@@ -22,9 +22,14 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
+// app.post("/", (req, res) => {
+//    console.log(req.body)
+//   res.send(req.body);
+// });
 app.post("/", (req, res) => {
-   console.log(req.body)
-  res.send(req.body);
+  var subName = req.body.yourname
+  var subEmail = req.body.youremail;
+ res.send("Hello " + subName + ", Thank you for subcribing. You email is " + subEmail);
 });
 
 app.listen(PORT, () => { 
