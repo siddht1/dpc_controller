@@ -7,6 +7,10 @@ const PORT = process.env.PORT || 3002;
 
 // serve your css as static
 app.use(express.static(__dirname));
+
+// get our app to use body parser 
+app.use(bodyParser.urlencoded({ extended: true }))
+
 // const response = await fetch(_url);
 // const data = await response.json();
 // For testing purposes 
@@ -18,7 +22,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  res.send("Thank you for subscribing");
+   console.log(req.body)
+  res.send(req.body);
 });
 
 app.listen(PORT, () => { 
