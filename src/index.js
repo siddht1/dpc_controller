@@ -20,6 +20,8 @@ app.get("/", (req, res) => {
    // app.use(express.static(__dirname));
     //res.send(__dirname);
     res.sendFile(__dirname + "/index.html");
+   var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+res.send({"status":"OK","API":"WORKING @ V1","API_V1":"/API/V1","url":fullUrl,"CORS":"allowed"});
 });
 
 // app.post("/", (req, res) => {
